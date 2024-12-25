@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 
 class AppDrawer extends StatelessWidget {
+  const AppDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -37,20 +39,20 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-  leading: Icon(Icons.info),
-  title: Text('Musteri_kayıt'),
-  onTap: () {
-    Navigator.pushNamed(context, '/kisisel_bilgiler');
-  },
-),
-ListTile(
-  leading: Icon(Icons.map),
-  title: Text('Harita'),
-  onTap: () {
-    Navigator.pushNamed(context, '/harita');
-  },
-),
-          
+            leading: Icon(Icons.info),
+            title: Text('Musteri_kayıt'),
+            onTap: () {
+              Navigator.pushNamed(context, '/kisisel_bilgiler');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.map),
+            title: Text('Harita'),
+            onTap: () {
+              Navigator.pushNamed(context, '/harita');
+            },
+          ),
+
           Divider(),
           ListTile(
             leading: Icon(Icons.exit_to_app),

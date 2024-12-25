@@ -3,16 +3,16 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
 class NavigationPage extends StatefulWidget {
-  const NavigationPage({Key? key}) : super(key: key);
+  const NavigationPage({super.key});
 
   @override
   State<NavigationPage> createState() => _NavigationPageState();
 }
 
 class _NavigationPageState extends State<NavigationPage> {
-  late final MapController _mapController; 
-  double _currentZoom = 13.0; 
-  final LatLng _initialPosition = const LatLng(41.052165, 29.010980); 
+  late final MapController _mapController;
+  double _currentZoom = 13.0;
+  final LatLng _initialPosition = const LatLng(41.052165, 29.010980);
 
   @override
   void initState() {
@@ -23,7 +23,7 @@ class _NavigationPageState extends State<NavigationPage> {
   // Zoom In
   void _zoomIn() {
     setState(() {
-      _currentZoom = (_currentZoom + 1).clamp(1.0, 18.0); 
+      _currentZoom = (_currentZoom + 1).clamp(1.0, 18.0);
       _mapController.move(_initialPosition, _currentZoom);
     });
   }
@@ -58,7 +58,8 @@ class _NavigationPageState extends State<NavigationPage> {
             children: [
               // OpenStreetMap Katmanı
               TileLayer(
-                urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                urlTemplate:
+                    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 subdomains: const ['a', 'b', 'c'],
               ),
               // Marker Katmanı

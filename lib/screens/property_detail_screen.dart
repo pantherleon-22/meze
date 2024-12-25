@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../widgets/drawer.dart'; // 📌 Drawer'ı import ettik
 
 class PropertyDetailScreen extends StatefulWidget {
+  const PropertyDetailScreen({super.key});
+
   @override
   _PropertyDetailScreenState createState() => _PropertyDetailScreenState();
 }
@@ -15,7 +17,8 @@ class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    property = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+    property =
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
     _pageController = PageController(initialPage: 0);
   }
 
@@ -81,7 +84,8 @@ class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
                   errorBuilder: (context, error, stackTrace) {
                     return Container(
                       color: Colors.grey[300],
-                      child: Icon(Icons.image, size: 50, color: Colors.grey[600]),
+                      child:
+                          Icon(Icons.image, size: 50, color: Colors.grey[600]),
                     );
                   },
                 );

@@ -7,7 +7,8 @@ class PropertyListScreen extends StatefulWidget {
   final List<Map<String, dynamic>> allProperties;
   final Function(Map<String, dynamic>) addProperty;
 
-  PropertyListScreen({required this.allProperties, required this.addProperty});
+  const PropertyListScreen(
+      {super.key, required this.allProperties, required this.addProperty});
 
   @override
   _PropertyListScreenState createState() => _PropertyListScreenState();

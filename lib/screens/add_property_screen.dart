@@ -5,12 +5,15 @@ class AddPropertyScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
 
   final TextEditingController imageUrlController = TextEditingController();
-  final TextEditingController secondImageUrlController = TextEditingController();
+  final TextEditingController secondImageUrlController =
+      TextEditingController();
   final TextEditingController priceController = TextEditingController();
   final TextEditingController locationController = TextEditingController();
   final TextEditingController sizeController = TextEditingController();
   final TextEditingController roomsController = TextEditingController();
   final TextEditingController parkingController = TextEditingController();
+
+  AddPropertyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +82,8 @@ class AddPropertyScreen extends StatelessWidget {
                         'rooms': roomsController.text,
                         'parking': parkingController.text,
                       };
-                      Navigator.pop(context, newProperty); // 📌 Yeni property'yi geri döndür
+                      Navigator.pop(context,
+                          newProperty); // 📌 Yeni property'yi geri döndür
                     }
                   },
                   style: ElevatedButton.styleFrom(

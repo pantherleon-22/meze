@@ -3,9 +3,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'screens/property_list_screen.dart';
 import 'screens/property_detail_screen.dart';
 import 'screens/add_property_screen.dart';
-import 'screens/personal_info.dart'; 
-import 'screens/navigation.dart'; 
-
+import 'screens/personal_info.dart';
+import 'screens/navigation.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,6 +23,8 @@ void main() async {
 }
 
 class HermesKiralamaUygulamasi extends StatefulWidget {
+  const HermesKiralamaUygulamasi({super.key});
+
   @override
   _HermesKiralamaUygulamasiState createState() =>
       _HermesKiralamaUygulamasiState();
@@ -87,8 +88,8 @@ class _HermesKiralamaUygulamasiState extends State<HermesKiralamaUygulamasi> {
             ),
         '/detail': (context) => PropertyDetailScreen(),
         '/add': (context) => AddPropertyScreen(),
-        '/kisisel_bilgiler': (context) => KisiselBilgilerEkrani(), 
-        '/harita': (context) => const NavigationPage(),// Yeni rota
+        '/kisisel_bilgiler': (context) => KisiselBilgilerEkrani(),
+        '/harita': (context) => const NavigationPage(), // Yeni rota
       },
     );
   }

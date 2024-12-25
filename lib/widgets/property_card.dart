@@ -9,7 +9,8 @@ class PropertyCard extends StatelessWidget {
   final String rooms;
   final String parking;
 
-  PropertyCard({
+  const PropertyCard({
+    super.key,
     required this.images,
     required this.price,
     required this.location,
@@ -36,7 +37,8 @@ class PropertyCard extends StatelessWidget {
               height: 150,
               width: double.infinity,
               fit: BoxFit.cover,
-              errorBuilder: (context, error, stackTrace) { // 📌 Hata yönetimi ekledik
+              errorBuilder: (context, error, stackTrace) {
+                // 📌 Hata yönetimi ekledik
                 return Container(
                   height: 150,
                   color: Colors.grey[300],

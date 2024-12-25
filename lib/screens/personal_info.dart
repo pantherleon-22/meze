@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/services.dart';
 
 class KisiselBilgilerEkrani extends StatefulWidget {
+  const KisiselBilgilerEkrani({super.key});
+
   @override
   _KisiselBilgilerEkraniState createState() => _KisiselBilgilerEkraniState();
 }
